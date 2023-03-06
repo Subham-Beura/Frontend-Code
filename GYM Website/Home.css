@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+
+    /* ---------------------------------- Font ---------------------------------- */
+    font-family: 'Baloo Bhai 2', cursive;
+
+}
+
+body {
+    /* background: url(); */
+    background: url(pexels-anush-gorak-1431282.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 2000px;
+
+    /* width: 100%;
+    height: 100%; */
+    /* --------------------------------- Sizing  --------------------------------- */
+    margin: 0px;
+    padding: 0px;
+    color: white;
+
+}
+
+header {
+    
+    position: fixed;
+    z-index: 10;
+}
+
+/*! --------------------------------- Logo-------------------------------- */
+/* Completed */
+/* !DO not touch*/
+
+.Left {
+    border: 1px solid white;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    height: 80px;
+    width: 28%;
+    text-align: center;
+    font-size: 50px;
+    padding: 1px 7px;
+    background-color: #050505a6;
+    border-radius: 20px;
+
+}
+
+/*! ------------------------------ END of Logo------------------------------ */
+
+
+
+/* * Navigation Bar
+    use border to works with box. */
+/* !DO NOT TOUCH */
+.Center {
+    /* border: 2px solid blueviolet; */
+    margin: 0px 390px;
+    width: 73%;
+    padding-left: 2px;
+    display: block;
+}
+
+.Center ul li {
+    /* border: 2px orange solid; */
+    display: inline-block;
+    margin: 3px 15px;
+    padding: 7px 5px;
+
+}
+
+.Center ul li a {
+    /* border: blue 2px solid; */
+    padding: 1px 9px;
+    margin: 1px 1px;
+
+    font-size: 21px;
+    text-decoration: none;
+    color: white;
+    background-color: #00000087;
+
+    /* *TO BE KEPT SAME FOR ALL BUTTONS ATLEAST IN HEADER  */
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.Center ul li a:hover {
+    text-decoration: none;
+
+    color: black;
+    background-color: white;
+}
+
+/*! ---------------------------------- CENTER ENDS--------------------------------- */
+
+
+
+.container {
+    position: relative;
+    border: 1px solid rgba(59, 57, 57, 0.788);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.589);
+    top: 180px;
+    margin: 0px 1%;
+    width: 37%;
+    height: fit-content;
+
+}
+
+.container li {
+    list-style: none;
+    margin: 2px 3px;
+}
+
+.container ul li input {
+    width: 90%;
+    margin: 6px;
+    background-color: black;
+    color: white;
+    border: 1px solid #a4a4a4;
+    border-radius: 8px;
+    padding-left: 10px;
+}
+
+.container ul li input::placeholder,::-webkit-datetime-edit  {
+    color: rgb(138, 132, 132);
+}
+.btn{
+    border: solid 1px #a4a4a4;
+    width:fit-content;
+    margin: 10px;
+    padding: 1px 7px;
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(138, 132, 132);
+    font-size: 18px;
+    text-align: center;
+}
+.btn:hover{
+    border: solid 1px #a4a4a4;
+    width:fit-content;
+   
+   background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+#FormHeading {
+    margin: 2px 3px;
+    text-align: center;
+}

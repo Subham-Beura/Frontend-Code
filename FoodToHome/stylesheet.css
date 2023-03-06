@@ -1,0 +1,441 @@
+/* -------------------------------- CSS reset ------------------------------- */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------ CSS Variables ----------------------------- */
+/* variables{
+    --headerBa
+} */
+
+
+
+/* ------------------------------- Background  ------------------------------- */
+body {
+    /* To remove gap b/w sections */
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/** -------------------------------------------------------------------------- */
+/**                                   Header                                   */
+/** -------------------------------------------------------------------------- */
+header {
+    height: 10vh;
+    display: flex;
+    /* vertical centering */
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    position: fixed;
+    z-index: 1;
+}
+
+/* Creates A dark film over Header */
+header::before {
+    content: "";
+    background-color: black;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    height: 100%;
+    width: 100%;
+
+    z-index: -1;
+    /* change to adjust header visibility */
+    opacity: 0.65;
+}
+
+/* ---------------------------------- Logo ---------------------------------- */
+.logo {
+
+    width: 40vw;
+
+    display: flex;
+    /* To adjust hozontal */
+    justify-content: center;
+    text-align: center;
+}
+
+.logo h1 {
+    /* padding: 3px 3px; */
+    color: white;
+    font-size: 2rem;
+}
+
+/* reduces font size for small screens   */
+@media only screen and (max-width:400px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    .logo h1 {
+        font-size: 1.7rem;
+    }
+}
+
+/* ------------------------------------ . ----------------------------------- */
+
+
+
+/* --------------------------------- navbar --------------------------------- */
+
+.mainmenu ul {
+
+    width: 60vw;
+
+    display: flex;
+    /* Removes linst bullets */
+    list-style: none;
+    /* Adjsust Horizontaly */
+    justify-content: space-evenly;
+
+    /* !Do not center verticaly.  Positon is hardcoded with padding 170px 0px */
+}
+
+.mainmenu ul li {
+    font-size: 1.1rem;
+    width: 13vw;
+    display: flex;
+    justify-content: center;
+    /* margin: 20px 30px; */
+    /* width: max-content; */
+}
+
+.mainmenu ul li a {
+    padding: 3px 0px;
+    border: 1px solid rgb(189, 186, 186);
+    /* Removes Blue lines */
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    width: 13vw;
+}
+
+/* todo; Learn to do a scroll down menu */
+@media only screen and (max-width:400px) {
+    .mainmenu ul li {
+        width: 15vw;
+    }
+
+    .mainmenu ul li a {
+        font-size: 0.7rem;
+        width: 15vw;
+    }
+}
+
+@media only screen and (max-width:635px) {
+    .mainmenu ul li {
+        width: 14vw;
+    }
+
+    .mainmenu ul li a {
+        font-size: 0.7rem;
+        width: 14vw;
+        padding: 7px 0px;
+    }
+}
+
+.mainmenu ul li a:hover {
+
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+/* ------------------------------------ . ----------------------------------- */
+
+
+/** -------------------------------------------------------------------------- */
+
+
+
+
+
+/** -------------------------------------------------------------------------- */
+/**                                Landing Place                               */
+/** -------------------------------------------------------------------------- */
+
+
+
+
+/* ----------------------------- Welcome Banner ----------------------------- */
+#home {
+
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    /* padding: 150px 0px; */
+    background-color: rgba(0, 0, 0, 0.295);
+    height: 64vh;
+    position: relative;
+
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(img/italian-cuisine-2378729.jpg) no-repeat center center/cover;
+
+    opacity: 0.85;
+    z-index: -2;
+
+
+}
+
+#home h3 {
+    font-size: 3.5rem;
+    padding: 3px;
+}
+
+#home p {
+    width: 60vw;
+    text-align: center;
+    padding: 2px;
+    margin: 2px;
+}
+
+/* ------------------------------- WelcomeEND ------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+
+
+/** ------------------------------ Service ----------------------------- */
+#clientSection {
+    /* border: 1px solid red; */
+    display: flex;
+
+    flex-direction: column;
+    /* vertical centering */
+    justify-content: center;
+    /* horizontal centering in client section */
+    align-items: center;
+    z-index: 0;
+
+
+
+}
+
+/* Our services heading in .secondaryHeading + nextline */
+#ourServices {
+    width: 55vw;
+
+    margin: 30px;
+    padding: 5px 0px;
+
+    text-align: center;
+    color: #000000;
+
+    border: 2px solid black;
+    border-radius: 20px;
+
+}
+
+/* contains the service cards */
+.serviceBox {
+    width: 98vw;
+    height: fit-content;
+    margin: 2px 3px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+/* details service given */
+.serviceCards {
+    border-radius: 20px;
+    margin: 25px 10px;
+
+    width: 30vw;
+    height: 80vh;
+    position: relative;
+    color: rgb(255, 250, 250);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* z-index: 10; */
+
+}
+
+/* Dark film over service */
+.serviceCards::before {
+    content: "";
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: #000000;
+    opacity: 0.5;
+    /* ! DO Not Change */
+    z-index:-1;
+
+    border-radius: 20px;
+}
+
+.serviceCards p {
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    margin: auto;
+}
+
+.serviceCards h3 {
+    text-align: center;
+    font-size: 1.8rem;
+
+    border-bottom: white solid 1px;
+
+    margin: 2.5vh auto;
+    width: 30vw;
+    padding: 15px 0px;
+
+}
+
+.serviceCards button {
+    margin: auto 1vw;
+    margin: 2vh 1vw;
+
+
+}
+
+#catering {
+
+    background: url(img/servicecardcatering.jpg) no-repeat center center/cover;
+    /*To keep background behind the dark film in .serviceCards::before*/
+    z-index: -2;
+}
+
+#Bulk {
+    background: url(img/servicecardbulk.jpg) no-repeat center center/cover;
+    /*To keep background behind the dark film in .serviceCards::before*/
+    z-index: -2;
+
+}
+
+#Delivery {
+
+    background: url(img/sercvicecardDelivery.jpg) no-repeat center center/cover;
+    /*To keep background behind the dark film in .serviceCards::before*/
+    z-index: -2;
+}
+
+/** ------------------------------- ServiceEnd ------------------------------- */
+/** -------------------------------------------------------------------------- */
+
+
+
+/** -------------------------------------------------------------------------- */
+/**                                   Clients                                  */
+/** -------------------------------------------------------------------------- */
+/* Clients Section */
+#partner{
+    height: fit fit-content;
+    background: url(img/clientSectionBG.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* overflow-x: scroll; */
+
+}
+.headingPartner{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#imagecontainer{
+    display: flex;
+    justify-content: space-around;
+    padding:  10vh 0vw;
+    margin: 5vh 0vwq;
+    overflow-x: scroll;
+}
+#imagecontainer div{
+    /* border:  red solid 1px; */
+    height: 150px;
+    width:  100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 3px  10px;
+
+}
+#imagecontainer div img{
+    /* border:  red solid 1px; */
+    height: 140px;
+    width: 90px;
+
+}
+@media
+
+
+
+
+
+/** ----------------------------- Utility Classes ---------------------------- */
+
+.secondaryHeading {
+    font-size: 2.1rem;
+
+}
+
+.orderbtn {
+    background: none;
+    cursor: pointer;
+
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+
+    margin: 10px 0px;
+    padding: 2px 5px;
+    width: 20vw;
+
+    z-index: 0;
+}
+
+.orderbtn:hover {
+    z-index: 0;
+    background-color: white;
+    color: #000000;
+}
+
+/* inserts scrolling overflow but removes the scrollbar */
+.overflowcorection {
+    overflow: scroll;
+}
+
+.overflowcorection::-webkit-scrollbar {
+    display: none;
+}
